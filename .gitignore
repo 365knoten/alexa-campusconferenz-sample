@@ -1,0 +1,8 @@
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# This file is used to configure the behavior of git
+# all files/folders listed here will never be checked in
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+node_modules
+dist
+appid.json

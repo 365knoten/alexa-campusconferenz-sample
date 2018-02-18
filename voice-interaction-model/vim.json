@@ -1,0 +1,251 @@
+// Upload this interactionmodel to the alexa console
+{
+    "languageModel": {
+      "types": [
+        {
+          "name": "SessionType",
+          "values": [
+            {
+              "id": null,
+              "name": {
+                "value": "Session",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Vortrag",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Workshop",
+                "synonyms": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "Speaker",
+          "values": [
+            {
+              "id": null,
+              "name": {
+                "value": "Holger",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Rolf",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Claudio",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Sven",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Christian",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Ina",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Sabine",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Steve",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Throben",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Erk",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Ruth",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Michael",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Konstanze",
+                "synonyms": []
+              }
+            },
+            {
+              "id": null,
+              "name": {
+                "value": "Andrea",
+                "synonyms": []
+              }
+            }
+          ]
+        }
+      ],
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "SessionQueryIndent",
+          "samples": [
+            "welche Sessions laufen {Zeit}",
+            "welche Sessions laufen um {Zeit}",
+            "welche Sessions laufen gegen {Zeit}",
+            "was ist um {Zeit}",
+            "was läuft {Zeit}",
+            "was kann ich {Zeit} ansehen",
+            "was kann ich mir um {Zeit} anhören",
+            "was kann ich mir {Zeit} ansehen",
+            "was kann ich mir um {Zeit} ansehen",
+            "was um  {Zeit} läuft",
+            "was jetzt läuft",
+            "was kann ich mir gerade ansehen",
+            "ich mir gerade ansehen kann",
+            "was ich mir jetzt ansehen kann",
+            "was ich mir als nächstes ansehen kann",
+            "was ich mir um {Zeit} ansehen kann",
+            "was ich mir um {Zeit} anhören kann",
+            "was kann ich mir um {Zeit} Uhr ansehen",
+            "was ich mir um {Zeit} Uhr ansehen kann",
+            "welche Sessions laufen um {Zeit} Uhr",
+            "welche Sessions um {Zeit} laufen",
+            "was gerade läuft",
+            "was im moment läuft"
+          ],
+          "slots": [
+            {
+              "name": "Zeit",
+              "type": "AMAZON.TIME"
+            }
+          ]
+        },
+        {
+          "name": "WhenSpeaksIntend",
+          "samples": [
+            "wann {Person} spricht",
+            "wann spricht {Person}",
+            "der Vortrag von {Person} ist",
+            "der Vortrag mit {Person} ist",
+            "die Session mit {Person} ist",
+            "Wann ist die Session mit {Person}",
+            "Wann ist der Vortrag mit {Person}",
+            "Wann ist der Vortrag von {Person}",
+            "Wann ist die Session von {Person}",
+            "Wann der {SessionType} von {Person} ist",
+            "Wann die {SessionType} von {Person} ist"
+          ],
+          "slots": [
+            {
+              "name": "Person",
+              "type": "Speaker"
+            },
+            {
+              "name": "SessionType",
+              "type": "SessionType"
+            }
+          ]
+        }
+      ],
+      "invocationName": "campuskonferenz"
+    }
+  }
