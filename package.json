@@ -1,5 +1,5 @@
 {
-  "name": "campusconferenz",
+  "name": "alexa-campusconferenz-sample",
   "version": "1.0.0",
   "description": "An alexa skill for Team Neusta's 2018 Campus Conference",
   "main": "index.js",
