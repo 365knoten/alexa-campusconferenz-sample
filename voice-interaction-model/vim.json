@@ -1,4 +1,3 @@
-// Upload this interactionmodel to the alexa console
 {
     "languageModel": {
       "types": [
@@ -90,14 +89,14 @@
             {
               "id": null,
               "name": {
-                "value": "Throben",
+                "value": "Thorben",
                 "synonyms": []
               }
             },
             {
               "id": null,
               "name": {
-                "value": "Erk",
+                "value": "Erik",
                 "synonyms": []
               }
             },
@@ -140,99 +139,36 @@
         {
           "name": "AMAZON.HelpIntent",
           "samples": []
-        },
-        {
-          "name": "AMAZON.MoreIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.NavigateSettingsIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.NextIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.PageDownIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.PageUpIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.PreviousIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.ScrollDownIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.ScrollLeftIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.ScrollRightIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.ScrollUpIntent",
-          "samples": []
-        },
+        },     
         {
           "name": "AMAZON.StopIntent",
           "samples": []
         },
         {
-          "name": "SessionQueryIndent",
-          "samples": [
-            "welche Sessions laufen {Zeit}",
-            "welche Sessions laufen um {Zeit}",
-            "welche Sessions laufen gegen {Zeit}",
-            "was ist um {Zeit}",
-            "was läuft {Zeit}",
-            "was kann ich {Zeit} ansehen",
-            "was kann ich mir um {Zeit} anhören",
-            "was kann ich mir {Zeit} ansehen",
-            "was kann ich mir um {Zeit} ansehen",
-            "was um  {Zeit} läuft",
-            "was jetzt läuft",
-            "was kann ich mir gerade ansehen",
-            "ich mir gerade ansehen kann",
-            "was ich mir jetzt ansehen kann",
-            "was ich mir als nächstes ansehen kann",
-            "was ich mir um {Zeit} ansehen kann",
-            "was ich mir um {Zeit} anhören kann",
-            "was kann ich mir um {Zeit} Uhr ansehen",
-            "was ich mir um {Zeit} Uhr ansehen kann",
-            "welche Sessions laufen um {Zeit} Uhr",
-            "welche Sessions um {Zeit} laufen",
-            "was gerade läuft",
-            "was im moment läuft"
-          ],
-          "slots": [
-            {
-              "name": "Zeit",
-              "type": "AMAZON.TIME"
-            }
-          ]
-        },
-        {
           "name": "WhenSpeaksIntend",
           "samples": [
             "wann {Person} spricht",
-            "wann spricht {Person}",
-            "der Vortrag von {Person} ist",
-            "der Vortrag mit {Person} ist",
-            "die Session mit {Person} ist",
+            "wann spricht {Person}",    
+            "wann ist das mit {Person}",        
+            "wann war der {SessionType} von {Person}",                    
             "Wann ist die Session mit {Person}",
             "Wann ist der Vortrag mit {Person}",
             "Wann ist der Vortrag von {Person}",
             "Wann ist die Session von {Person}",
             "Wann der {SessionType} von {Person} ist",
-            "Wann die {SessionType} von {Person} ist"
+            "Wann die {SessionType} von {Person} ist",
+            "Wie spät der {SessionType} from {Person} ist",
+            "Wie spät die {SessionType} from {Person} ist",
+            "Wie spät der {SessionType} from {Person} war",
+            "Wie spät die {SessionType} from {Person} war",
+            "Wann die {SessionType} from {Person} läuft",
+            "Wann der {SessionType} from {Person} läuft",
+            "Wann die {SessionType} from {Person} lief",
+            "Wann der {SessionType} from {Person} lief",
+            "wann war der {SessionType} von {Person}",        
+            "wann war die {SessionType} von {Person}",
+            "wann war der {SessionType} von {Person} nochmal",        
+            "wann war die {SessionType} von {Person} nochmal"           
           ],
           "slots": [
             {

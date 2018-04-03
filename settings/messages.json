@@ -1,4 +1,17 @@
 {
-    "HELP":"Willkommen bei der Campuskonferenz 2018. Frage mich nach den Sessions",
-    "GOODBYE":["Ciao","Auf Wiedersehen","Bis Denn"]
+   
+    
+    "HELP":"Willkommen bei der Campuskonferenz 2018. Frage mich danach, wann der Vortrag von jemandem ist.",
+
+    "GOODBYE":[
+        "Ciao",
+        "Auf Wiedersehen",
+        "<say-as interpret-as=\"interjection\">bis bald.</say-as>"
+    ],
+
+    "GOODBYE_ANGRILY":[
+        "Ich bin <emphasis level=\"strong\">nicht</emphasis> begeistert.",
+        "<say-as interpret-as=\"interjection\">ist nicht dein ernst.</say-as>",
+        "<say-as interpret-as=\"interjection\">hört hört.</say-as> <break time=\"3s\"/> Geh doch"
+    ]   
 }
