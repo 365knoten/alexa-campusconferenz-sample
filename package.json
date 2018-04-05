@@ -10,10 +10,11 @@
   "author": "Sven Sieverding",
   "license": "ISC",
   "dependencies": {
-    "alexa-app": "^4.2.1",
-    "aws-lambda-mock-context": "^3.1.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "ngrok": "^2.2.26"
+  },
+  "devDependencies": {
+    "alexa-sdk": "^1.0.25"
   }
 }

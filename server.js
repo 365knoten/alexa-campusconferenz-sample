@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const context = require('aws-lambda-mock-context');
-var alexaskill = require('./src/alexaskill');
+var alexaskill = require('./lambda');
 
 
 // Setup express webserver

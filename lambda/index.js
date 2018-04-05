@@ -1,17 +1,21 @@
+/* eslint-disable  func-names */
+/* eslint quote-props: ["error", "consistent"]*/
+
+
 const Alexa = require('alexa-sdk');
 
 // The Settings we will use to register our skill with Aleca
-const settings = require('../appid.json')
+const settings = require('./appid.json')
 
 
 // A help message that our Skill will say if we ask for help
-const HELPMESSAGE = require('../settings/messages.json').HELP
+const HELPMESSAGE = require('./messages.json').HELP
 
 // An array of possible "goodbye "messages
-const GOODBYEMESSAGES = require('../settings/messages.json').GOODBYE
+const GOODBYEMESSAGES = require('./messages.json').GOODBYE
 
 // An array of angry "goodbye "messages
-const GOODBYEMESSAGES_ANGRILY = require('../settings/messages.json').GOODBYE_ANGRILY
+const GOODBYEMESSAGES_ANGRILY = require('./messages.json').GOODBYE_ANGRILY
 
 // A Function that will return all sessions for a given speaker
 const getSessionsbySpeaker = require('./database').getAllBySpeaker;
@@ -135,7 +139,7 @@ const handlers = {
                 // add a comma before every other session
                 var conjunction = "";
                 if (i != 0) {
-                    if (i != sessions.length) {
+                    if (i != (sessions.length-1)) {
                         conjunction = ", ";
                     } else {
                         conjunction = " und "

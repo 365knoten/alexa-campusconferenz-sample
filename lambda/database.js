@@ -1,5 +1,5 @@
 // load our data from agenda.json
-var data = require('../settings/agenda.json')
+var data = require('./agenda.json')
 
 // make all Entries lowercase (makes it easier to compare them)
 data=JSON.parse(JSON.stringify(data).toLowerCase())
