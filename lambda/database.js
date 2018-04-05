@@ -1,5 +1,6 @@
+
 // load our data from agenda.json
-var data = require('./agenda.json')
+var data = require('../agenda.json')
 
 // make all Entries lowercase (makes it easier to compare them)
 data=JSON.parse(JSON.stringify(data).toLowerCase())
@@ -8,7 +9,7 @@ data=JSON.parse(JSON.stringify(data).toLowerCase())
  * Returns all sessions for a single speaker
  * @param {*} speaker 
  */
-exports.getAllBySpeaker=function(speaker){     
+exports.getSessionsBySpeaker=function(speaker){     
     console.log("Returning all Sessions matching the speaker "+speaker.toLowerCase())   
     return data.filter(session => {
         if (session.speakers!=null && session.speakers.indexOf(speaker.toLowerCase())>-1){
@@ -17,6 +18,13 @@ exports.getAllBySpeaker=function(speaker){
         return false;
     });
 }
+
+
+
+
+
+
+
 
 
 // a counter variable to store how often a single user asked an intent

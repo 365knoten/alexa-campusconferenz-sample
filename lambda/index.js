@@ -4,24 +4,19 @@
 
 const Alexa = require('alexa-sdk');
 
-// The Settings we will use to register our skill with Aleca
-const settings = require('./appid.json')
+// The settings we will used to register our skill with Alexa
+const settings = require('../appid.json')
 
 
-// A help message that our Skill will say if we ask for help
-const HELPMESSAGE = require('./messages.json').HELP
+// A the messages we will return to the user
+const MESSAGES = require('../messages/messages.json');
 
-// An array of possible "goodbye "messages
-const GOODBYEMESSAGES = require('./messages.json').GOODBYE
+// Our "Database"
+const database = require('./database');
 
-// An array of angry "goodbye "messages
-const GOODBYEMESSAGES_ANGRILY = require('./messages.json').GOODBYE_ANGRILY
 
-// A Function that will return all sessions for a given speaker
-const getSessionsbySpeaker = require('./database').getAllBySpeaker;
 
-// A Function that will tell us how often a user invoked a request
-const howOftenWasThisAsked = require('./database').howOftenWasThisAsked;
+
 
 
 
@@ -49,7 +44,7 @@ const handlers = {
         console.log('"Unhandled" Intent invoked');
         // this will "ask" the user the help message
         // if the user does not respont within a given time with a valid intent the skill will ask again
-        this.emit(':ask', HELPMESSAGE, HELPMESSAGE);
+        this.emit(':ask', MESSAGES.HELP, MESSAGES.HELP);
     },
     // This is the intent that is called whenever the asks alexa to "open campusconference"
     // This has to be implemented by every skill
@@ -86,16 +81,16 @@ const handlers = {
         var userID = this.event.session.user.userId;
 
         // Did a single user tell alexa to stop  three times? Then Respont angrily
-        if (howOftenWasThisAsked("STOP",userID)>2){
+        if (database.howOftenWasThisAsked("STOP",userID)>2){
             console.log("Alexa has been asked more than five times by the current user to stop");
-            // We take a random Message from the GOODBYEMESSAGES Array
-            var goodbymessageangrily = GOODBYEMESSAGES_ANGRILY[Math.floor(Math.random() * GOODBYEMESSAGES_ANGRILY.length)];
+            // We take a random Message from the MESSAGES.GOODBYE_ANGRILY Array
+            var goodbymessageangrily = MESSAGES.GOODBYE_ANGRILY[Math.floor(Math.random() * MESSAGES.GOODBYE_ANGRILY.length)];
             this.emit(':tell', goodbymessageangrily);
             return;
         }
 
         // We take a random Message from the GOODBYEMESSAGES Array
-        var goodbymessage = GOODBYEMESSAGES[Math.floor(Math.random() * GOODBYEMESSAGES.length)];
+        var goodbymessage = MESSAGES.GOODBYE[Math.floor(Math.random() * MESSAGES.GOODBYE.length)];
         this.emit(':tell', goodbymessage);
     },
 
@@ -117,7 +112,7 @@ const handlers = {
         const Person = this.event.request.intent.slots.Person.value;
 
         // retrieve all sessions for the given person        
-        var sessions = getSessionsbySpeaker(Person);
+        var sessions = database.getSessionsBySpeaker(Person);
 
         console.log("Found " + sessions.length + " sessions for " + Person);
 
@@ -157,6 +152,15 @@ const handlers = {
 };
 
 
+
+
+
+
+
+
+
+
+
 /**
  * This is the wireup function for the skill
  * @param {*} event 
@@ -168,6 +172,7 @@ exports.handler = function (event, context, callback) {
     alexa.appId = settings.APPID;
     alexa.registerHandlers(handlers);
     alexa.execute();
+    
 };
 
 

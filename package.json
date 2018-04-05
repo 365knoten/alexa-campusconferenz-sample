@@ -2,7 +2,7 @@
   "name": "alexa-campusconferenz-sample",
   "version": "1.0.0",
   "description": "An alexa skill for Team Neusta's 2018 Campus Conference",
-  "main": "index.js",
+  "main": "lambda/index.js",
   "scripts": {
     "start": "node ./server.js",
     "ngrok": "ngrok http 3030"
@@ -10,11 +10,13 @@
   "author": "Sven Sieverding",
   "license": "ISC",
   "dependencies": {
+    "alexa-sdk": "^1.0.25"
+  },
+  "devDependencies": {
+    "alexa-app": "^4.2.1",
+    "aws-lambda-mock-context": "^3.1.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "ngrok": "^2.2.26"
-  },
-  "devDependencies": {
-    "alexa-sdk": "^1.0.25"
   }
 }
