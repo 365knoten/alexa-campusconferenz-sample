@@ -82,7 +82,7 @@ const handlers = {
 
         // Did a single user tell alexa to stop  three times? Then Respont angrily
         if (database.howOftenWasThisAsked("STOP",userID)>2){
-            console.log("Alexa has been asked more than five times by the current user to stop");
+            console.log("Alexa has been asked more than three times by the current user to stop");
             // We take a random Message from the MESSAGES.GOODBYE_ANGRILY Array
             var goodbymessageangrily = MESSAGES.GOODBYE_ANGRILY[Math.floor(Math.random() * MESSAGES.GOODBYE_ANGRILY.length)];
             this.emit(':tell', goodbymessageangrily);
