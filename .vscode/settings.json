@@ -1,0 +1,4 @@
+{
+      // Steuert den Schriftgrad in Pixeln.
+  "editor.fontSize": 26,
+}

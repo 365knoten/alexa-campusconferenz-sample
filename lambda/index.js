@@ -47,7 +47,6 @@ const handlers = {
         this.emit(':ask', MESSAGES.HELP, MESSAGES.HELP);
     },
     // This is the intent that is called whenever the asks alexa to "open campusconference"
-    // This has to be implemented by every skill
     "LaunchRequest": function (intent, session, response) {
         console.log('"LaunchRequest" Intent invoked');
         // this will just redirect to  the "Unhandled" intent as we don't want to handle this seperately
